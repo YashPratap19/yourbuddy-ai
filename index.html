@@ -8,7 +8,6 @@
   <meta property="og:title" content="YourBuddy.ai | Your AI Mental Health Companion">
   <meta property="og:description" content="YourBuddy.ai is your companion for mental wellbeing, available 24/7 to provide support, guidance, and personalized coping strategies.">
   <meta property="og:type" content="website">
-  <!-- Updated preview image URL -->
   <meta property="og:image" content="https://i.ibb.co/RkB27tKr/image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -86,6 +85,7 @@
       color: var(--light);
       font-size: 2rem;
       cursor: pointer;
+      margin: 0 1rem;
     }
     
     .nav-links {
@@ -435,45 +435,31 @@
       font-size: 0.875rem;
     }
     
-    /* Responsive adjustments */
+    /* Responsive adjustments for horizontal header on mobile */
     @media (max-width: 768px) {
       .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0;
       }
       
-      .mobile-menu-toggle {
-        display: block;
-      }
-      
-      .nav-links {
-        flex-direction: column;
-        width: 100%;
-        text-align: left;
-        margin-top: 0.5rem;
-        display: none;
-      }
-      
-      .nav-links.active {
-        display: flex;
+      .logo img {
+        height: 30px;
       }
       
       .cta-button {
         padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-        margin-top: 1rem;
+        font-size: 0.8rem;
       }
       
-      .logo img {
-        height: 35px;
+      /* Only show the hamburger and hide nav links to ensure a single line */
+      .nav-links {
+        display: none;
       }
       
-      .hero-content {
-        flex-direction: column-reverse;
-      }
-      
-      .hero h1 {
-        font-size: 2.25rem;
+      .mobile-menu-toggle {
+        display: block;
       }
     }
   </style>
@@ -483,16 +469,20 @@
   <header>
     <div class="container">
       <nav class="navbar">
+        <!-- Logo -->
         <a href="#" class="logo">
           <img src="https://i.ibb.co/tpwSqX8J/image-Photoroom-1.png" alt="YourBuddy.ai Logo">
         </a>
+        <!-- Hamburger toggle (shown on mobile) -->
         <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle Menu">☰</button>
+        <!-- Navigation links (hidden on mobile) -->
         <div class="nav-links">
           <a href="#features">Features</a>
           <a href="#how-it-works">How It Works</a>
           <a href="#testimonials">Testimonials</a>
           <a href="#faq">FAQ</a>
         </div>
+        <!-- Get Started Button -->
         <button class="cta-button">Get Started</button>
       </nav>
     </div>
