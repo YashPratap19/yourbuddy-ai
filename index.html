@@ -26,16 +26,15 @@
   
   <style>
     :root {
-      --primary: #29B9CD; /* updated blue color */
+      --primary: #29B9CD;
       --primary-dark: #6366f1;
       --primary-light: #a5b4fc;
       --secondary: #34d399;
-      --dark: #000000; /* pitch black */
-      --darker: #000000; /* pitch black for consistency */
+      --dark: #000000;
+      --darker: #000000;
       --medium-dark: #1e293b;
       --light: #e2e8f0;
       --gray: #94a3b8;
-      --dark-gray: #334155;
       --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
     
@@ -76,7 +75,8 @@
     }
     
     .logo img {
-      height: 50px; /* adjust as needed */
+      height: 50px;
+      transition: all 0.2s ease;
     }
     
     .mobile-menu-toggle {
@@ -459,8 +459,13 @@
       }
       
       .cta-button {
-        align-self: center;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
         margin-top: 1rem;
+      }
+      
+      .logo img {
+        height: 35px;
       }
       
       .hero-content {
@@ -481,7 +486,7 @@
         <a href="#" class="logo">
           <img src="https://i.ibb.co/tpwSqX8J/image-Photoroom-1.png" alt="YourBuddy.ai Logo">
         </a>
-        <button id="mobile-menu-toggle" class="mobile-menu-toggle">☰</button>
+        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle Menu">☰</button>
         <div class="nav-links">
           <a href="#features">Features</a>
           <a href="#how-it-works">How It Works</a>
@@ -503,7 +508,7 @@
           <button class="cta-button">Start Chatting Now</button>
         </div>
         <div class="hero-image">
-          <img src="/api/placeholder/400/320" alt="YourBuddy.ai app interface" />
+          <img src="/api/placeholder/400/320" alt="YourBuddy.ai app interface">
         </div>
       </div>
     </div>
