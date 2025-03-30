@@ -73,8 +73,12 @@
       padding: 1rem 0;
     }
     
-    .logo img {
-      height: 50px;
+    /* Logo text instead of image */
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
       transition: all 0.2s ease;
     }
     
@@ -86,6 +90,9 @@
       font-size: 2rem;
       cursor: pointer;
       margin: 0 1rem;
+      line-height: 1;
+      display: flex;
+      align-items: center;
     }
     
     .nav-links {
@@ -444,22 +451,22 @@
         padding: 0.5rem 0;
       }
       
-      .logo img {
-        height: 30px;
+      .logo {
+        font-size: 1.5rem; /* smaller text for logo */
+      }
+      
+      .mobile-menu-toggle {
+        display: block;
+      }
+      
+      /* Hide navigation links on mobile */
+      .nav-links {
+        display: none;
       }
       
       .cta-button {
         padding: 0.5rem 1rem;
         font-size: 0.8rem;
-      }
-      
-      /* Only show the hamburger and hide nav links to ensure a single line */
-      .nav-links {
-        display: none;
-      }
-      
-      .mobile-menu-toggle {
-        display: block;
       }
     }
   </style>
@@ -469,10 +476,10 @@
   <header>
     <div class="container">
       <nav class="navbar">
-        <!-- Logo -->
-        <a href="#" class="logo">
-          <img src="https://i.ibb.co/tpwSqX8J/image-Photoroom-1.png" alt="YourBuddy.ai Logo">
-        </a>
+        <!-- Logo as text using Inter font and blue color -->
+        <a href="#" class="logo">YourBuddy.AI</a>
+        <!-- Get Started Button -->
+        <button class="cta-button">Get Started</button>
         <!-- Hamburger toggle (shown on mobile) -->
         <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle Menu">☰</button>
         <!-- Navigation links (hidden on mobile) -->
@@ -482,8 +489,6 @@
           <a href="#testimonials">Testimonials</a>
           <a href="#faq">FAQ</a>
         </div>
-        <!-- Get Started Button -->
-        <button class="cta-button">Get Started</button>
       </nav>
     </div>
   </header>
